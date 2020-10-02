@@ -1,0 +1,15 @@
+.task {
+  margin: 5px;
+  border: 1px solid #282c34;
+  height: 30px;
+  max-width: 40vw;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  justify-content: space-between;
+}
+
+.completed {
+  text-decoration: line-through;
+}

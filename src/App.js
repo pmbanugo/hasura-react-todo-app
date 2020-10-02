@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+
+import Tasks from "./Tasks";
+import TodoInput from "./TodoInput";
+import logo from "./logo.svg";
+import "./App.css";
+
+const client = new ApolloClient({
+  uri: "GRAPHQL_ENDPOINT", // TODO: replace with actual URL
+  cache: new InMemoryCache(),
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ApolloProvider client={client}>
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>ToDo App</p>
+        </header>
+        <br />
+        <TodoInput />
+        <Tasks />
+      </div>
+    </ApolloProvider>
   );
 }
 
