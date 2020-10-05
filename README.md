@@ -393,6 +393,6 @@ When this component renders, the `useQuery` hook runs, and a result object is re
 
 At this point, you have a fully functional todo application. You can start it by running the `npm start` command from the command line.
 
-![hasura todos table.png](https://ucarecdn.com/b7fd0d2b-60f1-445d-9b09-addd5d60f5e6/)
+![hasura-tutorial.gif](https://ucarecdn.com/15f67a04-4581-4fcd-acf4-3cf73b389330/)
 
 With what you've learnt so far, this leaves you empowered to build GraphQL powered-apps using Hasura and Apollo Client. You should now be familiar with Hasura Cloud and Hasura console, and how to connect Apollo Client to your server and use the provided hook functions to simplify querying the API and updating the UI when the data changes.
